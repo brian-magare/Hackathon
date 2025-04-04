@@ -1,0 +1,132 @@
+/* ===== Base Styles ===== */
+:root {
+  /* Teal + Coral Scheme */
+  --teal: #2dd4bf;      /* Vibrant teal */
+  --coral: #ff7e6b;     /* Warm coral */
+  
+  /* Mustard Yellow + Deep Blue Scheme */
+  --mustard: #ffd166;   /* Energetic yellow */
+  --deep-blue: #26547c; /* Trustworthy blue */
+  
+  /* Dark Purple + Gold Scheme */
+  --purple: #5e2c99;    /* Rich purple */
+  --gold: #ffd700;      /* Luxurious gold */
+  
+  /* Neutrals */
+  --white: #ffffff;
+  --black: #1a1a1a;
+  --light-gray: #f5f5f5;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-gray);
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ===== Header (Teal + Coral) ===== */
+.header {
+  background: linear-gradient(135deg, var(--teal), var(--coral));
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* ===== Projects Section (Mustard + Deep Blue) ===== */
+.projects {
+  background-color: var(--white);
+  padding: 3rem;
+}
+
+.project-card {
+  background: var(--deep-blue);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  color: var(--mustard);
+}
+
+/* ===== Skills Section (Purple + Gold) ===== */
+.skills {
+  background: linear-gradient(135deg, var(--purple), #3a0ca3);
+  color: var(--white);
+  padding: 3rem;
+  text-align: center;
+}
+
+.skill-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--purple);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* ===== Footer (Teal + Coral) ===== */
+.footer {
+  background: var(--teal);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Button Styles ===== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--coral);
+  color: var(--white);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--teal);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--purple);
+}
